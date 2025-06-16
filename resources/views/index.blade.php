@@ -155,30 +155,53 @@
 
         /* Section 3: About Us */
 
-        #about-us {
-            max-width: 900px;
-            margin: 0 auto 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            color: #7c9c3b;
-        }
+#about-us {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    color: #7c9c3b;
+}
 
-        #about-us .about-text {
-            flex: 1 1 450px;
-            font-weight: 600;
-            font-size: 15px;
-            line-height: 1.5;
-        }
+#about-us .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
 
-        #about-us img {
-            flex: 0 0 300px;
-            height: auto;
-            max-width: 300px;
-            object-fit: contain;
-        }
+#about-us .about-text {
+    flex: 1;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 15px;
+}
+
+#about-us .about-image {
+    flex: 0 0 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-us .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    #about-us .about-container {
+        flex-direction: column;
+    }
+
+    #about-us .about-image {
+        flex: 1;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
 
         /* Section 4: Our Locations */
 
@@ -285,6 +308,10 @@
         #contact-us form button:hover {
             background-color: #1a4419;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 
@@ -293,14 +320,14 @@
     <header>
         <div class="logo">Logo</div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About us</a>
-            <a href="#">contact us</a>
+            <a href="#welcome">Home</a>
+            <a href="#about-us">About us</a>
+            <a href="#contact-us">contact us</a>
         </nav>
     </header>
 
     <main>
-        <img src="{{ asset('images/a9eab53c-5648-43e1-a4e8-f8eb75cc2a72.png') }}" alt="Environment Machine" />
+        <img src="{{ asset('images\Screenshot 2025-06-13 223702.png') }}" alt="Environment Machine" />
         <div class="content">
             <h2>protecting Nature, Preserving Tomorrow</h2>
             <h2>Join Us in Creating a Greener Future</h2>
@@ -320,18 +347,24 @@
     </section>
 
     <!-- Section 3: About Us -->
-    <section id="about-us">
-        <h2 class="section-title">About Us</h2>
-        <p class="about-text">
-            We are a passionate community committed to protecting the environment and promoting sustainable living. One
-            of our key initiatives is the Reverse Vending Machine (RVM) program, which encourages recycling by rewarding
-            users for returning plastic bottles
-            and cans. Through innovative solutions like the RVM, along with education and community action, we aim to
-            reduce waste, conserve resources, and inspire lasting change for a cleaner, greener future.
-        </p>
-        <img src="{{ asset('images/a9eab53c-5648-43e1-a4e8-f8eb75cc2a72.png') }}" alt="Reverse Vending Machine" />
-    </section>
-
+    <!-- Section 3: About Us -->
+<section id="about-us">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-container">
+        <div class="about-text">
+            <p>
+                We are a passionate community committed to protecting the environment and promoting sustainable living. One
+                of our key initiatives is the Reverse Vending Machine (RVM) program, which encourages recycling by rewarding
+                users for returning plastic bottles and cans. Through innovative solutions like the RVM, along with education
+                and community action, we aim to reduce waste, conserve resources, and inspire lasting change for a cleaner,
+                greener future.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="{{ asset('images\Screenshot 2025-06-13 223702.png') }}" alt="Reverse Vending Machine" />
+        </div>
+    </div>
+</section>
     <!-- Section 4: Our Locations -->
     <section id="locations">
         <h2 class="section-title">Our Locations</h2>
@@ -367,24 +400,38 @@
     <!-- Section 5: Contact Us -->
     <section id="contact-us">
         <h2 class="section-title">Contact Us</h2>
+
+        @if(session('success'))
+    <div style="background: #72bd2f; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center;">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if($errors->any())
+    <div style="background: #ff6b6b; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
         <form method="POST" action="{{ route('contact.store') }}">
             @csrf
             <label for="name">Name</label>
-            <select id="name" name="name">
-                <option value="andrew" selected>Andrew</option>
-            </select>
+            <input type="text" id="name" name="name" required />
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" />
+            <input type="email" id="email" name="email" required />
 
             <label for="contact-number">Contact Number</label>
-            <input type="text" id="contact-number" name="contact-number" />
+            <input type="text" id="contact-number" name="contact-number" required />
 
             <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="optional" />
+            <input type="text" id="subject" name="subject" required />
 
             <label for="description">Description</label>
-            <textarea id="description" name="description"></textarea>
+            <textarea id="description" name="description" required></textarea>
 
             <button type="submit">Submit</button>
         </form>
