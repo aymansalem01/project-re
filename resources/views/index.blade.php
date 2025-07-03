@@ -36,7 +36,12 @@
             align-items: center;
             font-weight: bold;
             font-size: 18px;
-            border: 2px solid black;
+
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
         }
 
         nav {
@@ -155,53 +160,50 @@
 
         /* Section 3: About Us */
 
-#about-us {
-    max-width: 900px;
-    margin: 0 auto 60px;
-    color: #7c9c3b;
-}
+        #about-us {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            color: #7c9c3b;
+        }
 
-#about-us .about-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 30px;
-}
+        #about-us .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 30px;
+        }
 
-#about-us .about-text {
-    flex: 1;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1.6;
-    padding: 15px;
-}
+        #about-us .about-text {
+            flex: 1;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 1.6;
+            padding: 15px;
+        }
 
-#about-us .about-image {
-    flex: 0 0 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        #about-us .about-image {
+            flex: 0 0 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-#about-us .about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        #about-us .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-@media (max-width: 768px) {
-    #about-us .about-container {
-        flex-direction: column;
-    }
+        @media (max-width: 768px) {
 
-    #about-us .about-image {
-        flex: 1;
-        width: 100%;
-        margin-top: 20px;
-    }
-}
+            #about-us .about-image {
+                flex: 1;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
 
         /* Section 4: Our Locations */
 
@@ -318,7 +320,7 @@
 <body>
 
     <header>
-        <div class="logo">Logo</div>
+        <div class="logo"><img src="{{ asset('images/logo.png') }}"></div>
         <nav>
             <a href="#welcome">Home</a>
             <a href="#about-us">About us</a>
@@ -347,53 +349,49 @@
     </section>
 
     <!-- Section 3: About Us -->
-    <!-- Section 3: About Us -->
-<section id="about-us">
-    <h2 class="section-title">About Us</h2>
-    <div class="about-container">
-        <div class="about-text">
-            <p>
-                We are a passionate community committed to protecting the environment and promoting sustainable living. One
-                of our key initiatives is the Reverse Vending Machine (RVM) program, which encourages recycling by rewarding
-                users for returning plastic bottles and cans. Through innovative solutions like the RVM, along with education
-                and community action, we aim to reduce waste, conserve resources, and inspire lasting change for a cleaner,
-                greener future.
-            </p>
+    <section id="about-us">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-container" dir="rtl">
+            <div>
+                <div>
+                    <h1 style="font-size: 40px"> " كل عبوة لها قيمة , كن جزءا من التغيير"</h1>
+                </div>
+                <div class="about-text">
+                    <p style="color: black ; font-size: 20px">
+                        برزت فكرتنا من رؤيا التحديث الاقتصادي لصاحب الجلالة من محور المبادرات
+                        و الاوليات لقطاع الصناعة و استهدفنا رؤية الامتثال البيئي في التصنيع الذي يعمل على (اعداد معايير
+                        مماراسات الاقتصاد الدائري في الانشطة الصناعية والتركيز على المجتمعات الصناعية البيئية) و (دعم
+                        وتشجيع مفهوم الصتميم الذكي)
+                    </p>
+                    <p style=" font-size: 20px">
+                        استنادا الى البيانات التالية :
+                    <ul>
+                        <li>نسبة الحاجة للمواد المعاد تدويرها حوالي 30-40 % سنويا</li>
+                        <li> معدل المخلفات البلاستيكية 600000 الف طن سنويا</li>
+                        <li> معدل المخلفات المعدنية 1000000-150000 الف طن سنويا</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="{{ asset('images\Screenshot 2025-06-13 223702.png') }}" alt="Reverse Vending Machine" />
+            </div>
         </div>
-        <div class="about-image">
-            <img src="{{ asset('images\Screenshot 2025-06-13 223702.png') }}" alt="Reverse Vending Machine" />
-        </div>
-    </div>
-</section>
+    </section>
     <!-- Section 4: Our Locations -->
     <section id="locations">
         <h2 class="section-title">Our Locations</h2>
         <div class="locations-list">
-            <div class="location-item">
-                <img src="{{ asset('images/google-location-icon.png') }}" alt="Location" />
-                <h3>Station Name</h3>
-                <button>See Location</button>
-            </div>
-            <div class="location-item">
-                <img src="{{ asset('images/google-location-icon.png') }}" alt="Location" />
-                <h3>Station Name</h3>
-                <button>See Location</button>
-            </div>
-            <div class="location-item">
-                <img src="{{ asset('images/google-location-icon.png') }}" alt="Location" />
-                <h3>Station Name</h3>
-                <button>See Location</button>
-            </div>
-            <div class="location-item">
-                <img src="{{ asset('images/google-location-icon.png') }}" alt="Location" />
-                <h3>Station Name</h3>
-                <button>See Location</button>
-            </div>
-            <div class="location-item">
-                <img src="{{ asset('images/google-location-icon.png') }}" alt="Location" />
-                <h3>Station Name</h3>
-                <button>See Location</button>
-            </div>
+            @forelse ($points as $point)
+                <div class="location-item">
+                    <img src="{{ asset('images/google-location-icon.png') }}" alt="Location" />
+                    <h3>Station Name</h3>
+                    <button><a href="{{ $point->location }}" style="text-decoration: none ; color: white;"> See Location </a></button>
+                </div>
+            @empty
+                <p>We add point Soon.</p>
+            @endforelse
+
         </div>
     </section>
 
@@ -401,21 +399,22 @@
     <section id="contact-us">
         <h2 class="section-title">Contact Us</h2>
 
-        @if(session('success'))
-    <div style="background: #72bd2f; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center;">
-        {{ session('success') }}
-    </div>
-@endif
+        @if (session('success'))
+            <div
+                style="background: #72bd2f; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center;">
+                {{ session('success') }}
+            </div>
+        @endif
 
-@if($errors->any())
-    <div style="background: #ff6b6b; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+        @if ($errors->any())
+            <div style="background: #ff6b6b; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form method="POST" action="{{ route('contact.store') }}">
             @csrf
             <label for="name">Name</label>

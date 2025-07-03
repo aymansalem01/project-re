@@ -25,6 +25,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Point;
+
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -57,5 +59,11 @@ class ContactController extends Controller
 
         return redirect()->back()
                ->with('success', 'Thank you for your message! We will contact you soon.');
+    }
+
+    public function index()
+    {
+        $points = Point::all();
+        return view('index',['points'=>$points]);
     }
 }
