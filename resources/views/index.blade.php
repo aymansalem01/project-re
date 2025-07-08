@@ -190,10 +190,15 @@
         }
 
         #about-us .about-image img {
-            max-width: 100%;
-            height: auto;
+            max-width: 200px;
+            height: 400px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+        #partnerships{
+            max-width: 900px;
+            margin: 0 auto 60px;
+            color: #7c9c3b;
         }
 
         @media (max-width: 768px) {
@@ -253,7 +258,7 @@
         /* Section 5: Contact Us */
 
         #contact-us {
-            max-width: 700px;
+            max-width: 900px;
             margin: 0 auto 50px;
             text-align: center;
             color: #20551f;
@@ -329,7 +334,7 @@
     </header>
 
     <main>
-        <img src="{{ asset('images\Screenshot 2025-06-13 223702.png') }}" alt="Environment Machine" />
+        <img src="{{ asset('images\mach.png') }}" alt="Environment Machine" />
         <div class="content">
             <h2>protecting Nature, Preserving Tomorrow</h2>
             <h2>Join Us in Creating a Greener Future</h2>
@@ -374,10 +379,11 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="{{ asset('images\Screenshot 2025-06-13 223702.png') }}" alt="Reverse Vending Machine" />
+                <img src="{{ asset('images\mach.png') }}" alt="Reverse Vending Machine" />
             </div>
         </div>
     </section>
+
     <!-- Section 4: Our Locations -->
     <section id="locations">
         <h2 class="section-title">Our Locations</h2>
@@ -386,7 +392,8 @@
                 <div class="location-item">
                     <img src="{{ asset('images/google-location-icon.png') }}" alt="Location" />
                     <h3>Station Name</h3>
-                    <button><a href="{{ $point->location }}" style="text-decoration: none ; color: white;"> See Location </a></button>
+                    <button><a href="{{ $point->location }}" style="text-decoration: none ; color: white;"> See Location
+                        </a></button>
                 </div>
             @empty
                 <p>We add point Soon.</p>
@@ -394,6 +401,22 @@
 
         </div>
     </section>
+
+    <section id="partnerships">
+        <h2 class="section-title">Our partnerships</h2>
+            <div style="display: flex; justify-content: between; gap: 40px;">
+                <div style="width: 35%; padding: 40px;">
+                    <img src="{{ asset('images\Orange_logo.png') }}" alt="" style="width: 100%">
+                </div>
+                 <div style="width: 35%; padding: 40px;">
+                    <img src="{{ asset('images\logo_amman.png') }}" alt="" style="width: 100%; margin-top: 40px;">
+                </div>
+
+
+            </div>
+    </section>
+
+
 
     <!-- Section 5: Contact Us -->
     <section id="contact-us">
