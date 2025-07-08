@@ -210,6 +210,10 @@
             }
         }
 
+
+
+
+
         /* Section 4: Our Locations */
 
         #locations {
@@ -383,6 +387,121 @@
             </div>
         </div>
     </section>
+
+
+
+    <!-- Section: Our Services & Products -->
+<section id="services" style="background: #f9fcf8; padding: 50px 0;">
+    <h2 class="section-title">خدماتنا ومنتجاتنا</h2>
+
+    <div class="services-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <!-- Services Section -->
+        <div class="service-section" style="margin-bottom: 60px;">
+            <h3 style="text-align: center; color: #20551f; font-size: 28px; margin-bottom: 30px;">الخدمات التي نقدمها</h3>
+
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Service 1 -->
+                <div class="service-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                    <div class="service-img" style="height: 200px; overflow: hidden; display: flex; justify-content: center; align-items: center; background: #f0f7ed;">
+                        <img src="{{ asset('images/Picture1.png') }}" alt="آلة التدوير الذكية" style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 10px;">
+                    </div>
+                    <div class="service-content" style="padding: 20px;" dir="rtl">
+                        <h4 style="color: #20551f; margin-top: 0; font-size: 20px;">جمع العبوات الذكية</h4>
+                        <p style="color: #555; line-height: 1.6;">نقوم بجمع العبوات البلاستيكية والألمنيوم عبر آلات ذكية متطورة موزعة في مواقع استراتيجية</p>
+                        <ul style="padding-right: 15px; color: #555;">
+                            <li>مسح QR code للعبوات</li>
+                            <li>تسليم العبوات بسهولة</li>
+                            <li>الحصول على نقاط فورية</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                    <div class="service-img" style="height: 200px; overflow: hidden; display: flex; justify-content: center; align-items: center; background: #f0f7ed;">
+                        <img src="{{ asset('images/service2.jpg') }}" alt="نظام الحوافز" style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 10px;">
+                    </div>
+                    <div class="service-content" style="padding: 20px;" dir="rtl">
+                        <h4 style="color: #20551f; margin-top: 0; font-size: 20px;">نظام المكافآت</h4>
+                        <p style="color: #555; line-height: 1.6;">حوافز قيمة لمشاركتكم في إعادة التدوير</p>
+                        <ul style="padding-right: 15px; color: #555;">
+                            <li>تذاكر مواصلات عامة</li>
+                            <li>قسائم تخفيض من المتاجر</li>
+                            <li>جوائز شهرية</li>
+                            <li>خصومات من الشركاء</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                    <div class="service-img" style="height: 200px; overflow: hidden; display: flex; justify-content: center; align-items: center; background: #f0f7ed;">
+                        <img src="{{ asset('images/service3.jpg') }}" alt="الورشات التعليمية" style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 10px;">
+                    </div>
+                    <div class="service-content" style="padding: 20px;" dir="rtl">
+                        <h4 style="color: #20551f; margin-top: 0; font-size: 20px;">البرامج التعليمية</h4>
+                        <p style="color: #555; line-height: 1.6;">ورشات عمل وتوعية حول أهمية إعادة التدوير</p>
+                        <ul style="padding-right: 15px; color: #555;">
+                            <li>برامج للمدارس والجامعات</li>
+                            <li>تدريب عملي على الفرز</li>
+                            <li>زيارات لمصانع التدوير</li>
+                            <li>مواد توعوية مجانية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <div class="products-section">
+            <h3 style="text-align: center; color: #20551f; font-size: 28px; margin-bottom: 30px;">منتجاتنا للمصانع</h3>
+
+            <div class="products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Product 1 -->
+                <div class="product-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="product-img" style="height: 200px; overflow: hidden; background: #e8f4e5; display: flex; align-items: center; justify-content: center;">
+                        <img src="{{ asset('images/product1.jpg') }}" alt="بلاستيك معاد تدويره" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+                    </div>
+                    <div class="product-content" style="padding: 20px;" dir="rtl">
+                        <h4 style="color: #20551f; margin-top: 0; font-size: 20px;">البلاستيك المعاد تدويره</h4>
+                        <p style="color: #555; line-height: 1.6;">نوفر مواد بلاستيكية معاد تدويرها بجودة عالية للمصانع</p>
+                        <div style="background: #f0f7ed; padding: 10px; border-radius: 6px; margin-top: 15px;">
+                            <p style="margin: 0; color: #20551f; font-weight: bold;">45 طن سنوياً</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="product-img" style="height: 200px; overflow: hidden; background: #e8f4e5; display: flex; align-items: center; justify-content: center;">
+                        <img src="{{ asset('images/product2.png') }}" alt="ألمنيوم معاد تدويره" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+                    </div>
+                    <div class="product-content" style="padding: 20px;" dir="rtl">
+                        <h4 style="color: #20551f; margin-top: 0; font-size: 20px;">الألمنيوم المعاد تدويره</h4>
+                        <p style="color: #555; line-height: 1.6;">ألمنيوم خام معاد تدويره جاهز للاستخدام الصناعي</p>
+                        <div style="background: #f0f7ed; padding: 10px; border-radius: 6px; margin-top: 15px;">
+                            <p style="margin: 0; color: #20551f; font-weight: bold;">50 طن سنوياً</p>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- <!-- Product 3 -->
+                <div class="product-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="product-img" style="height: 200px; overflow: hidden; background: #e8f4e5; display: flex; align-items: center; justify-content: center;">
+                        <img src="{{ asset('images/product3.jpg') }}" alt="صناديق الجمع" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+                    </div>
+                    <div class="product-content" style="padding: 20px;" dir="rtl">
+                        <h4 style="color: #20551f; margin-top: 0; font-size: 20px;">صناديق الجمع الذكية</h4>
+                        <p style="color: #555; line-height: 1.6;">تصميم وتوريد صناديق جمع ذكية للمؤسسات والشركات</p>
+                        <div style="background: #f0f7ed; padding: 10px; border-radius: 6px; margin-top: 15px;">
+                            <p style="margin: 0; color: #20551f; font-weight: bold;">200 صندوق</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+</section>
 
     <!-- Section 4: Our Locations -->
     <section id="locations">
