@@ -510,7 +510,7 @@
             @forelse ($points as $point)
                 <div class="location-item">
                     <img src="{{ asset('images/google-location-icon.png') }}" alt="Location" />
-                    <h3>Station Name</h3>
+                    <h3>{{$point->name}}</h3>
                     <button><a href="{{ $point->location }}" style="text-decoration: none ; color: white;"> See Location
                         </a></button>
                 </div>
